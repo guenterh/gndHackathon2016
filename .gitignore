@@ -1,0 +1,7 @@
+# Ignore Maven target directory:
+target/
+metafacture-runner-3.4.0-SNAPSHOT.jar
+# Ignore Eclipse project files:
+.classpath
+.project
+.settings/
