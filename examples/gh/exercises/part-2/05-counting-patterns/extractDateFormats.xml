@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Solution for exercise 3a
+ -->
+
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="1" entityMarker=".">
+
+
+
+    <rules>
+
+        <!--
+        why isn't this possible?
+        <choose name="dateformat">
+
+            <data source="060R.a | 060R.b" >
+                <regexp match="^\d?\d?\d\d$" format="yyyy"/>
+            </data>
+            <data source="060R.a | 060R.b" >
+                <regexp match="^\d\d.\d\d.\d\d\d\d$" format="DD.MM.YYYY" />
+            </data>
+            <data source="060R.a | 060R.b" >
+                <constant value="not valid"/>
+            </data>
+        </choose>
+        -->
+        <choose name="birth">
+            <data source="060R.a">
+                <regexp match="^\d\d.\d\d.\d\d\d\d$" format="DD.MM.YYYY" />
+            </data>
+            <data source="060R.a">
+                <regexp match="^\d?\d?\d\d$" format="YYYY" />
+            </data>
+            <data source="060R.a">
+                <constant value="OTHER" />
+            </data>
+        </choose>
+        <choose name="death">
+            <data source="060R.b">
+                <regexp match="^\d\d.\d\d.\d\d\d\d$" format="DD.MM.YYYY" />
+            </data>
+            <data source="060R.b">
+                <regexp match="^\d?\d?\d\d$" format="YYYY" />
+            </data>
+            <data source="060R.b">
+                <constant value="OTHER" />
+            </data>
+        </choose>
+    </rules>
+
+
+
+</metamorph>

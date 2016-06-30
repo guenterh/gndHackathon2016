@@ -1,0 +1,75 @@
+DEBUG [main] [ObjectLogger] Filtering: 1 { name: Franz Kafka, birthplace: Prague, birthdate: 1883-07-03 }
+DEBUG [main] [ObjectLogger] Decoding: 1 { name: Franz Kafka, birthplace: Prague, birthdate: 1883-07-03 }
+DEBUG [main] [StreamLogger] Morphing 1: start record 1
+DEBUG [main] [StreamLogger] Morphing 2: start record 1
+DEBUG [main] [StreamLogger] Encoding: start record 1
+DEBUG [main] [StreamLogger] Morphing 1: literal name=Franz Kafka
+DEBUG [main] [StreamLogger] Morphing 2: literal Firstname=Franz
+DEBUG [main] [StreamLogger] Morphing 2: literal Lastname=Kafka
+DEBUG [main] [StreamLogger] Morphing 1: literal birthplace=Prague
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthplace=Prague
+DEBUG [main] [StreamLogger] Morphing 1: literal birthdate=1883-07-03
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthdate=03. July 1883
+DEBUG [main] [StreamLogger] Morphing 1: end record
+DEBUG [main] [StreamLogger] Morphing 2: end record
+DEBUG [main] [StreamLogger] Encoding: literal =1, Kafka, Franz, 03. July 1883, Prague
+DEBUG [main] [ObjectLogger] Writing: 1, Kafka, Franz, 03. July 1883, Prague
+DEBUG [main] [StreamLogger] Encoding: end record
+DEBUG [main] [ObjectLogger] Filtering: 2 { name: Václav Havel, birthplace: Prague, birthdate: 1939-10-05 }
+DEBUG [main] [ObjectLogger] Decoding: 2 { name: Václav Havel, birthplace: Prague, birthdate: 1939-10-05 }
+DEBUG [main] [StreamLogger] Morphing 1: start record 2
+DEBUG [main] [StreamLogger] Morphing 2: start record 2
+DEBUG [main] [StreamLogger] Encoding: start record 2
+DEBUG [main] [StreamLogger] Morphing 1: literal name=Václav Havel
+DEBUG [main] [StreamLogger] Morphing 2: literal Firstname=Václav
+DEBUG [main] [StreamLogger] Morphing 2: literal Lastname=Havel
+DEBUG [main] [StreamLogger] Morphing 1: literal birthplace=Prague
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthplace=Prague
+DEBUG [main] [StreamLogger] Morphing 1: literal birthdate=1939-10-05
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthdate=05. October 1939
+DEBUG [main] [StreamLogger] Morphing 1: end record
+DEBUG [main] [StreamLogger] Morphing 2: end record
+DEBUG [main] [StreamLogger] Encoding: literal =2, Havel, Václav, 05. October 1939, Prague
+DEBUG [main] [ObjectLogger] Writing: 2, Havel, Václav, 05. October 1939, Prague
+DEBUG [main] [StreamLogger] Encoding: end record
+DEBUG [main] [ObjectLogger] Filtering: 3 { name: Leoš Janáček, birthplace: Hukvaldy, birthdate: 1854-07-03 }
+DEBUG [main] [ObjectLogger] Decoding: 3 { name: Leoš Janáček, birthplace: Hukvaldy, birthdate: 1854-07-03 }
+DEBUG [main] [StreamLogger] Morphing 1: start record 3
+DEBUG [main] [StreamLogger] Morphing 2: start record 3
+DEBUG [main] [StreamLogger] Encoding: start record 3
+DEBUG [main] [StreamLogger] Morphing 1: literal name=Leoš Janáček
+DEBUG [main] [StreamLogger] Morphing 2: literal Firstname=Leoš
+DEBUG [main] [StreamLogger] Morphing 2: literal Lastname=Janáček
+DEBUG [main] [StreamLogger] Morphing 1: literal birthplace=Hukvaldy
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthplace=Hukvaldy
+DEBUG [main] [StreamLogger] Morphing 1: literal birthdate=1854-07-03
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthdate=03. July 1854
+DEBUG [main] [StreamLogger] Morphing 1: end record
+DEBUG [main] [StreamLogger] Morphing 2: end record
+DEBUG [main] [StreamLogger] Encoding: literal =3, Janáček, Leoš, 03. July 1854, Hukvaldy
+DEBUG [main] [ObjectLogger] Writing: 3, Janáček, Leoš, 03. July 1854, Hukvaldy
+DEBUG [main] [StreamLogger] Encoding: end record
+DEBUG [main] [ObjectLogger] Filtering: 4 { name: Franz Viktor Werfel, geburtsort: Prague, geburtsdatum: 1890-09-10 }
+DEBUG [main] [ObjectLogger] Filtering: 5 { name: Max Brod, birthplace: Prague, birthdate: 1884-05-27 }
+DEBUG [main] [ObjectLogger] Decoding: 5 { name: Max Brod, birthplace: Prague, birthdate: 1884-05-27 }
+DEBUG [main] [StreamLogger] Morphing 1: start record 5
+DEBUG [main] [StreamLogger] Morphing 2: start record 5
+DEBUG [main] [StreamLogger] Encoding: start record 5
+DEBUG [main] [StreamLogger] Morphing 1: literal name=Max Brod
+DEBUG [main] [StreamLogger] Morphing 2: literal Firstname=Max
+DEBUG [main] [StreamLogger] Morphing 2: literal Lastname=Brod
+DEBUG [main] [StreamLogger] Morphing 1: literal birthplace=Prague
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthplace=Prague
+DEBUG [main] [StreamLogger] Morphing 1: literal birthdate=1884-05-27
+DEBUG [main] [StreamLogger] Morphing 2: literal Birthdate=27. May 1884
+DEBUG [main] [StreamLogger] Morphing 1: end record
+DEBUG [main] [StreamLogger] Morphing 2: end record
+DEBUG [main] [StreamLogger] Encoding: literal =5, Brod, Max, 27. May 1884, Prague
+DEBUG [main] [ObjectLogger] Writing: 5, Brod, Max, 27. May 1884, Prague
+DEBUG [main] [StreamLogger] Encoding: end record
+DEBUG [main] [ObjectLogger] Filtering: closeStream
+DEBUG [main] [ObjectLogger] Decoding: closeStream
+DEBUG [main] [StreamLogger] Morphing 1: closeStream
+DEBUG [main] [StreamLogger] Morphing 2: closeStream
+DEBUG [main] [StreamLogger] Encoding: closeStream
+DEBUG [main] [ObjectLogger] Writing: closeStream

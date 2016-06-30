@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Solution for exercise 5a 
+	
+	Please note that a record may contain more than one 
+	occurrence of the fields 060R.a and 060R.b. This script 
+	is designed to count only the most specific date it finds 
+	in every record for each of the two fields.
+ -->
+ 
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1"
+	entityMarker=".">
+	
+	<rules>
+		<choose name="birth">
+			<data source="060R.a">
+				<regexp match="^\d\d.\d\d.\d\d\d\d$" format="DD.MM.YYYY" />
+			</data>
+			<data source="060R.a">
+				<regexp match="^\d?\d?\d\d$" format="YYYY" />
+			</data>
+			<data source="060R.a">
+				<constant value="OTHER" />
+			</data>
+		</choose>
+		<choose name="death">
+			<data source="060R.b">
+				<regexp match="^\d\d.\d\d.\d\d\d\d$" format="DD.MM.YYYY" />
+			</data>
+			<data source="060R.b">
+				<regexp match="^\d?\d?\d\d$" format="YYYY" />
+			</data>
+			<data source="060R.b">
+				<constant value="OTHER" />
+			</data>
+		</choose>
+
+
+		<!-- possible alternative
+		<choose name="birth" flushWith="060R.a">
+			<data source="060R.a">
+				<regexp match="^\d\d\.\d\d\.\d\d\d\d$" format="DD.MM.YYYY" />
+			</data>
+			<data source="060R.a">
+				<regexp match="^\d?\d?\d\d$" format="YYYY" />
+			</data>
+			<data source="060R.a">
+				<constant value="OTHER" />
+			</data>
+		</choose>
+		<choose name="death" flushWith="060R.b">
+			<data source="060R.b">
+				<regexp match="^\d\d\.\d\d\.\d\d\d\d$" format="DD.MM.YYYY" />
+			</data>
+			<data source="060R.b">
+				<regexp match="^\d?\d?\d\d$" format="YYYY" />
+			</data>
+			<data source="060R.b">
+				<constant value="OTHER" />
+			</data>
+		</choose>
+		-->
+
+
+	</rules>
+</metamorph>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Solution for exercise 3a
+ -->
+
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		version="1" entityMarker=".">
+
+	<rules>
+
+		<data source="021A.a" name="Title" />
+		<combine value="${PUBLISHER} ${LOCATION}" name="Publisher">
+			<data source="033A.n" name="PUBLISHER" />
+			<data source="033A.p" name="LOCATION" />
+		</combine>
+		<data source="011@.n" name="Year of Publication" />
+
+	</rules>
+
+</metamorph>

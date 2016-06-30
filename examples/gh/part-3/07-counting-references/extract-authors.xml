@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Solution for exercise 7a 
+ -->
+ 
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1"
+	entityMarker=".">
+	
+	<rules>
+		<combine name="{to:${AUTHOR-ID}}authorOf" value="${BOOK-ID}">
+			<data source="_id" name="BOOK-ID" />
+			<data source="028A.9" name="AUTHOR-ID" />
+		</combine>
+	</rules>
+	
+</metamorph>

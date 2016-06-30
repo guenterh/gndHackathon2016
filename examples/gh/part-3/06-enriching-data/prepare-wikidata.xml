@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Solution for exercise 6a 
+ -->
+ 
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1"
+	entityMarker=".">
+	
+	<rules>
+		<data source="gnd" name="_id" />
+		<data source="_else" />
+	</rules>
+	
+</metamorph>

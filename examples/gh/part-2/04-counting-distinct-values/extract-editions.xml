@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Solution for exercise 4a and 4b
+ -->
+ 
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		version="1" entityMarker=".">
+	
+	<rules>
+		<data source="032@.a" name="edition" />
+	</rules>
+	
+</metamorph>

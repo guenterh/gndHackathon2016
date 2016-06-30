@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Exercise 3a 
+ -->
+ 
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		version="1" entityMarker=".">
+	
+	<rules>
+
+
+				<choose>
+					<data source="021A.a" name="title">
+						<regexp match="^(In) (.*)$" format="${2}, ${1}"/>
+					</data>
+					<data source="021A.a" name="title"/>
+				</choose>
+				<data source="011@.n" name="year of publication"/>
+				<entity name="objectPublisherLocationAsEntity">
+					<combine name="publisher_location" value="${publisher}, ${location}">
+						<data source="033A.n" name="publisher"/>
+						<data source="033A.p" name="location"/>
+					</combine>
+				</entity>
+
+
+	</rules>
+	
+</metamorph>
