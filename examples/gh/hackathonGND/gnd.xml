@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="1" entityMarker=".">
+
+    <rules>
+
+
+        <data source="001" name="gndid"/>
+
+        <combine name="035number" value="${035number}" reset="true" flushWith="035  .a">
+            <if>
+                <data source="035  .a">
+
+                    <substring start="0" end="8"/>
+                    <equals string="(DE-588)"/>
+                </data>
+
+            </if>
+            <data source="035  .a" name="035number"/>
+        </combine>
+
+        
+
+    </rules>
+
+</metamorph>
