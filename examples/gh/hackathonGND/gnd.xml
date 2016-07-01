@@ -4,6 +4,37 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            version="1" entityMarker=".">
 
+    <macros>
+        <macro name="relaLabel5xx">
+            <combine name="@relaLabel5$[xx]" value="${relaLabel}" flushWith="5$[xx]??.9">
+                <if>
+                    <data source="5$[xx]??.9">
+                        <substring start="0" end="1"/>
+                        <equals string="4"/>
+                    </data>
+                </if>
+                <data source="5$[xx]??.9" name="relaLabel">
+                    <substring start="2" end="6"/>
+                </data>
+            </combine>
+
+        </macro>
+        <macro name="rela5xx">
+
+            <combine name="rela" value="${relaID}#${relaLabel}" reset="true">
+                <if>
+                    <data source="5$[xx]??.0">
+                        <substring start="0" end="8"/>
+                        <equals string="(DE-588)"/>
+                    </data>
+
+                </if>
+                <data source="5$[xx]??.0" name="relaID"/>
+                <data source="@relaLabel5$[xx]" name="relaLabel"/>
+            </combine>
+        </macro>
+    </macros>
+
     <rules>
 
 
@@ -22,7 +53,142 @@
         </combine>
 
         <!-- any other element not treated so far is passed to the next streaming module using the _else source -->
-        <data source="_else"/>
+        <!--<data source="_else"/>-->
+
+
+        <data source="079  .b" name="entity"/>
+
+        <data source="079  .v" name="subentity"/>
+        
+
+        <!--<concat name="name" delimiter="">
+            <data source="100??.a"/>
+            <data source="100??.b">
+            <compose prefix=" : "/>
+            </data>
+            <data source="100??.c">
+            <compose prefix=" : "/>
+            </data>
+            <data source="100??.q">
+            <compose prefix=" : "/>
+            </data>
+        </concat>-->
+        
+
+            <data source="100??.a" name="name"/>
+
+            <data source="110??.a" name="name"/>
+
+            <data source="111??.a" name="name"/>
+
+            <data source="130??.a" name="name"/>
+
+            <data source="150??.a" name="name"/>
+
+            <data source="151??.a" name="name"/>
+
+
+
+            <data source="400??.a" name="addName"/>
+
+            <data source="410??.a" name="addName"/>
+
+            <data source="411??.a" name="addName"/>
+
+            <data source="430??.a" name="addName"/>
+
+            <data source="450??.a" name="addName"/>
+
+            <data source="451??.a" name="addName"/>
+
+
+
+        <data source="548  .a" name="date"/>
+
+        <combine name="dateRel" value="${dateRel}" reset="true" flushWith="548  .9">
+            <if>
+                <data source="548  .9">
+
+                    <substring start="0" end="1"/>
+                    <equals string="4"/>
+                </data>
+
+            </if>
+            <data source="548  .9" name="dateRel">
+            <substring start="2" end="6"/>
+            </data>
+        </combine>
+
+
+        <call-macro name="relaLabel5xx" xx="00"/>
+        <call-macro name="rela5xx" xx="00"/>
+
+        <call-macro name="relaLabel5xx" xx="10"/>
+        <call-macro name="rela5xx" xx="10"/>
+
+        <call-macro name="relaLabel5xx" xx="11"/>
+        <call-macro name="rela5xx" xx="11"/>
+
+        <call-macro name="relaLabel5xx" xx="30"/>
+        <call-macro name="rela5xx" xx="30"/>
+
+        <call-macro name="relaLabel5xx" xx="50"/>
+        <call-macro name="rela5xx" xx="50"/>
+
+        <call-macro name="relaLabel5xx" xx="51"/>
+        <call-macro name="rela5xx" xx="51"/>
+
+
+
+        <!--<combine name="@relaLabel550" value="${relaLabel}" flushWith="550??.9">
+            <if>
+                <data source="550??.9">
+                    <substring start="0" end="1"/>
+                    <equals string="4"/>
+                </data>
+            </if>
+            <data source="550??.9" name="relaLabel">
+                <substring start="2" end="6"/>
+            </data>
+        </combine>-->
+
+
+        <!--<combine name="rela" value="${relaID}#${relaLabel}" reset="true">
+            <if>
+                <data source="550??.0">
+                    <substring start="0" end="8"/>
+                    <equals string="(DE-588)"/>
+                </data>
+
+            </if>
+            <data source="550??.0" name="relaID"/>
+            <data source="@relaLabel550" name="relaLabel"/>
+        </combine>-->
+
+
+        <!--combine name="@relaLabel510" value="${relaLabel}" flushWith="510??.9">
+            <if>
+                <data source="510??.9">
+                    <substring start="0" end="1"/>
+                    <equals string="4"/>
+                </data>
+            </if>
+            <data source="510??.9" name="relaLabel">
+                <substring start="2" end="6"/>
+            </data>
+        </combine>
+
+        <combine name="rela" value="${relaID}#${relaLabel}" reset="true">
+            <if>
+                <data source="510??.0">
+                    <substring start="0" end="8"/>
+                    <equals string="(DE-588)"/>
+                </data>
+
+            </if>
+            <data source="510??.0" name="relaID"/>
+            <data source="@relaLabel510" name="relaLabel"/>
+        </combine>-->
 
 
 
