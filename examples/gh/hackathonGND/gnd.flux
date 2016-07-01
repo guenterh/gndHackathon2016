@@ -6,5 +6,6 @@ open-file |
 decode-xml |
 handle-marcxml |
 morph(FLUX_DIR + "/gnd.xml") |
-encode-formeta (style="verbose") |
+//encode-formeta (style="verbose") |
+encode-formeta (style="multiline") |
 write(out);

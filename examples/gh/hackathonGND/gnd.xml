@@ -21,7 +21,10 @@
             <data source="035  .a" name="035number"/>
         </combine>
 
-        
+        <!-- any other element not treated so far is passed to the next streaming module using the _else source -->
+        <data source="_else"/>
+
+
 
     </rules>
 
