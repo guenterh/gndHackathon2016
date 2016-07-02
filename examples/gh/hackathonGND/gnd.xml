@@ -29,7 +29,9 @@
                     </data>
 
                 </if>
-                <data source="5$[xx]??.0" name="relaID"/>
+                <data source="5$[xx]??.0" name="relaID">
+                <regexp match=".DE.588.*"/>
+                </data>
                 <data source="@relaLabel5$[xx]" name="relaLabel"/>
             </combine>
         </macro>
@@ -150,10 +152,10 @@
             <data source="550??.9" name="relaLabel">
                 <substring start="2" end="6"/>
             </data>
-        </combine>-->
+        </combine>
 
 
-        <!--<combine name="rela" value="${relaID}#${relaLabel}" reset="true">
+        <combine name="rela" value="${relaID}#${relaLabel}" reset="true">
             <if>
                 <data source="550??.0">
                     <substring start="0" end="8"/>
@@ -161,7 +163,9 @@
                 </data>
 
             </if>
-            <data source="550??.0" name="relaID"/>
+            <data source="550??.0" name="relaID">
+                <regexp match=".DE.588.*"/>
+                    </data>
             <data source="@relaLabel550" name="relaLabel"/>
         </combine>-->
 
