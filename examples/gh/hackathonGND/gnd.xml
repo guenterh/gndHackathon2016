@@ -75,33 +75,121 @@
             <compose prefix=" : "/>
             </data>
         </concat>-->
-        
-
-            <data source="100??.a" name="name"/>
-
-            <data source="110??.a" name="name"/>
-
-            <data source="111??.a" name="name"/>
-
-            <data source="130??.a" name="name"/>
-
-            <data source="150??.a" name="name"/>
-
-            <data source="151??.a" name="name"/>
 
 
+        <concat name="name" delimiter="">
+            <data source="100??.a"/>
+            <data source="100??.b">
+                <compose prefix=", "/>
+            </data>
+            <data source="100??.c">
+                <compose prefix=", "/>
+            </data>
+            <data source="100??.t">
+                <compose prefix=". "/>
+            </data>
+        </concat>
 
-            <data source="400??.a" name="addName"/>
+        <concat name="name" delimiter="">
+            <data source="110??.a"/>
+            <data source="110??.b">
+                <compose prefix=", "/>
+            </data>
+            <data source="110??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
 
-            <data source="410??.a" name="addName"/>
+        <concat name="name" delimiter="">
+            <data source="111??.a"/>
+            <data source="111??.g">
+                <compose prefix=", "/>
+            </data>
+            <data source="111??.e">
+                <compose prefix=", "/>
+            </data>
+            <data source="111??.n">
+                <compose prefix=", "/>
+            </data>
+        </concat>
 
-            <data source="411??.a" name="addName"/>
+        <concat name="name" delimiter="">
+            <data source="130??.a"/>
+            <data source="130??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
 
-            <data source="430??.a" name="addName"/>
+        <concat name="name" delimiter="">
+            <data source="150??.a"/>
+            <data source="150??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
 
-            <data source="450??.a" name="addName"/>
+        <concat name="name" delimiter="">
+            <data source="151??.a"/>
+            <data source="151??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
 
-            <data source="451??.a" name="addName"/>
+        <concat name="addName" delimiter="">
+            <data source="400??.a"/>
+            <data source="400??.b">
+                <compose prefix=", "/>
+            </data>
+            <data source="400??.c">
+                <compose prefix=", "/>
+            </data>
+            <data source="400??.t">
+                <compose prefix=". "/>
+            </data>
+        </concat>
+
+        <concat name="addName" delimiter="">
+            <data source="410??.a"/>
+            <data source="410??.b">
+                <compose prefix=", "/>
+            </data>
+            <data source="410??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="addName" delimiter="">
+            <data source="411??.a"/>
+            <data source="411??.g">
+                <compose prefix=", "/>
+            </data>
+            <data source="411??.e">
+                <compose prefix=", "/>
+            </data>
+            <data source="411??.n">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="addName" delimiter="">
+            <data source="430??.a"/>
+            <data source="430??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="addName" delimiter="">
+            <data source="450??.a"/>
+            <data source="450??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="addName" delimiter="">
+            <data source="451??.a"/>
+            <data source="451??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
 
 
 
