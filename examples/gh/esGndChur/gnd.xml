@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metamorph xmlns="http://www.culturegraph.org/metamorph"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="1" entityMarker=".">
+
+
+    <rules>
+
+
+        <data source="001" name="gndid"/>
+        <data source="0247 .a" name="uri"/>
+
+        <combine name="035number" value="${035number}" reset="true" flushWith="035  .a">
+            <if>
+                <data source="035  .a">
+
+                    <substring start="0" end="8"/>
+                    <equals string="(DE-588)"/>
+                </data>
+
+            </if>
+            <data source="035  .a" name="035number"/>
+        </combine>
+
+        <!-- any other element not treated so far is passed to the next streaming module using the _else source -->
+        <!--<data source="_else"/>-->
+
+
+        <data source="079  .b" name="entity"/>
+
+        <data source="079  .v" name="subentity"/>
+        
+
+
+
+        <concat name="name100" delimiter="">
+            <data source="100??.a"/>
+            <data source="100??.b">
+                <compose prefix=", "/>
+            </data>
+            <data source="100??.c">
+                <compose prefix=", "/>
+            </data>
+            <data source="100??.t">
+                <compose prefix=". "/>
+            </data>
+        </concat>
+
+        <concat name="name110" delimiter="">
+            <data source="110??.a"/>
+            <data source="110??.b">
+                <compose prefix=", "/>
+            </data>
+            <data source="110??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="name111" delimiter="">
+            <data source="111??.a"/>
+            <data source="111??.g">
+                <compose prefix=", "/>
+            </data>
+            <data source="111??.e">
+                <compose prefix=", "/>
+            </data>
+            <data source="111??.n">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="name130" delimiter="">
+            <data source="130??.a"/>
+            <data source="130??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="name150" delimiter="">
+            <data source="150??.a"/>
+            <data source="150??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <concat name="name151" delimiter="">
+            <data source="151??.a"/>
+            <data source="151??.g">
+                <compose prefix=", "/>
+            </data>
+        </concat>
+
+        <entity name="additional400a[]" flushWith="record">
+                <data source="400??.a"/>
+        </entity>
+
+        <entity name="additional400b[]" flushWith="record">
+            <data source="400??.b"/>
+        </entity>
+
+        <entity name="additional400c[]" flushWith="record">
+                <data source="400??.c"/>
+        </entity>
+
+        <entity name="additional400d[]" flushWith="record">
+            <data source="400??.d"/>
+        </entity>
+
+        <entity name="additional400t[]" flushWith="record">
+            <data source="400??.t"/>
+        </entity>
+
+        <entity name="additional400x[]" flushWith="record">
+            <data source="400??.x"/>
+        </entity>
+
+
+        <entity name="additional410a[]" flushWith="record">
+            <data source="410??.a"/>
+        </entity>
+
+        <entity name="additional410b[]" flushWith="record">
+            <data source="410??.b"/>
+        </entity>
+
+
+        <entity name="additional411a[]" flushWith="record">
+            <data source="411??.a"/>
+        </entity>
+
+        <entity name="additional411b[]" flushWith="record">
+            <data source="411??.b"/>
+        </entity>
+
+        <entity name="additional430a[]" flushWith="record">
+            <data source="430??.a"/>
+        </entity>
+
+        <entity name="additional450a[]" flushWith="record">
+            <data source="450??.a"/>
+        </entity>
+
+        <entity name="additional450x[]" flushWith="record">
+            <data source="450??.x"/>
+        </entity>
+
+
+        <entity name="additional451a[]" flushWith="record">
+            <data source="451??.a"/>
+        </entity>
+
+
+        <entity name="additional451x[]" flushWith="record">
+            <data source="451??.x"/>
+        </entity>
+
+        <entity name="macs[]" flushWith="record">
+            <data source="750??.a"/>
+        </entity>
+
+
+
+    </rules>
+
+</metamorph>
