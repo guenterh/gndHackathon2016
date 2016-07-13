@@ -27,4 +27,4 @@ dbdir=${2%/}
 rela=$(joinArray , $(ls $csvdir/*.csv | grep "-"))
 nodes=$(joinArray , $(ls $csvdir/*.csv | grep -v "-"))
 
-neo4j-import --into $dbdir/gnd.db --id-type string --nodes $(echo $nodes) --relationships:RELA $(echo $rela) --skip-duplicate-nodes true --ignoe-empty-strings true
+neo4j-import --into $dbdir/gnd.db --id-type string --nodes $(echo $nodes) --relationships:RELA $(echo $rela) --skip-duplicate-nodes true --ignore-empty-strings true
