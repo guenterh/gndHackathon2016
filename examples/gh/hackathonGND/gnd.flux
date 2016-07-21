@@ -1,11 +1,13 @@
-in = FLUX_DIR + "/gnd.records.xml";
+indir = "/home/seb/temp/gnd";
+outdir = "/home/seb/temp/csv4";
 
-in |
-open-file |
+indir |
+read-dir |
+open-gzip |
 decode-xml |
 handle-marcxml |
 filter(FLUX_DIR + "/filter.xml") |
 morph(FLUX_DIR + "/gnd.xml") |
-change-id("gndid")|
+change-id("035number")|
 encode-neo4j|
-write-neo4j;
+write-neo4j(csvDir=outdir, csvFileLength="5000000", batchWriteSize="500");
